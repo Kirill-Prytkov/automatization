@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe90b7c4-d9a5-4e75-b706-05807c7b34d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locators/element_page_locator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/elements_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_elements.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/elements_test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for elements_test.test.executor": "Run",
-    "Python tests.Python tests for elements_test.test_text_box.executor": "Run",
-    "Python tests.Python tests for test_elements.TestElements.TestTextBox.test_text_box.executor": "Run",
-    "Python tests.Python tests in test_elements.py.executor": "Run",
-    "Python tests.Python tests in tests.executor": "Run",
-    "Python.elements_page.executor": "Run",
-    "Python.elements_test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/prink/PycharmProjects/QA_auto_project/.venv",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for elements_test.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for elements_test.test_text_box.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_elements.TestElements.TestTextBox.test_text_box.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_elements.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.elements_page.executor&quot;: &quot;Run&quot;,
+    &quot;Python.elements_test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/prink/PycharmProjects/QA_auto_project/.venv&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\prink\PycharmProjects\QA_auto_project\.venv" />
