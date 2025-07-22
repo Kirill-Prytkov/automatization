@@ -1,6 +1,7 @@
 import time
+import random
 
-from pages.elements_page import TextBoxPage, CheckBoxPage
+from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage, LinksPage
 
 
 class TestElements:
@@ -26,5 +27,97 @@ class TestCheckBox:
         output_result = check_box_page.get_output_result()
         print(input_checkbox)
         print(output_result)
-        assert  input_checkbox == output_result
-        time.sleep(5)
+        assert input_checkbox == output_result
+        time.sleep(2)
+
+class TestRadioButton:
+
+    def test_radio_button(self,driver):
+        radio_button_page = RadioButtonPage(driver, 'https://demoqa.com/radio-button')
+        radio_button_page.open()
+        radio_button_page.click_on_the_radio_button('yes')
+        output_yes = radio_button_page.get_output_result()
+        radio_button_page.click_on_the_radio_button('impressive')
+        output_impressive = radio_button_page.get_output_result()
+        radio_button_page.click_on_the_radio_button('no')
+        output_no = radio_button_page.get_output_result()
+        assert output_yes == 'Yes', "yes_error"
+        assert output_impressive == 'Impressive', "impressive_error"
+        assert output_no == 'No', "no_error"
+
+class TestWebTable:
+
+        def test_web_table_add_person(self, driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            add_new_person = web_table_page.add_new_person()
+            output_webtable_result = web_table_page.check_new_added_person()
+            print(add_new_person)
+            print(output_webtable_result)
+            assert add_new_person in output_webtable_result
+
+        def test_web_table_search(self, driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            key_word = web_table_page.add_new_person()[random.randint(0, 5)]
+            web_table_page.search_person(key_word)
+            table_result = web_table_page.check_search_person()
+            print(key_word)
+            print(table_result)
+            assert key_word in table_result
+
+        def test_webtable_update_person_info(self, driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            lastname = web_table_page.add_new_person()[1]
+            web_table_page.search_person(lastname)
+            age = web_table_page.update_person_info()
+            row = web_table_page.check_search_person()
+            assert age in row
+
+        def test_webtable_delete_person(self, driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            email = web_table_page.add_new_person()[3]
+            web_table_page.search_person(email)
+            web_table_page.delete_person()
+            text = web_table_page.check_deleted()
+            assert text == "No rows found"
+
+
+        def test_web_table_change_row(self,driver):
+            web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            count = web_table_page.select_up_to_some_rows()
+            assert count == [5, 10, 20, 25, 50, 100]
+
+class TestButtonPage:
+
+        def test_different_click_on_the_buttons(self, driver):
+            button_page = ButtonsPage(driver, 'https://demoqa.com/buttons')
+            button_page.open()
+            double = button_page.click_on_different_button("double")
+            right =  button_page.click_on_different_button("right")
+            click = button_page.click_on_different_button("click")
+            print(double)
+            print(right)
+            print(click)
+            assert double == "You have done a double click"
+            assert right == "You have done a right click"
+            assert click == "You have done a dynamic click"
+
+class Test_link_page:
+
+        def test_check_link(self, driver):
+            links_page = LinksPage(driver, 'https://demoqa.com/links')
+            links_page.open()
+            href_link, current_url = links_page.check_new_tab_simple_link()
+            print(href_link, current_url)
+
+        def test_broken_link(self, driver):
+            links_page = LinksPage(driver, 'https://demoqa.com/links')
+            links_page.open()
+            response_code = links_page.check_broken_link('https://demoqa.com/bad-request')
+            assert  response_code == 400
+
+
