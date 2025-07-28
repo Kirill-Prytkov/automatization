@@ -1,3 +1,4 @@
+
 from data.data import Person
 from faker import Faker
 import random
@@ -18,3 +19,10 @@ def generated_person():
         current_address=faker_ru.address(),
         permanent_address=faker_ru.address()
     )
+
+def generated_file():
+    path = fr'C:\Users\prink\Downloads\filetest{random.randint(0,1000)}.txt'
+    file = open(path, 'w+')
+    file.write(f'Hello world{random.randint(0,999999)}')
+    file.close()
+    return file.name, path
